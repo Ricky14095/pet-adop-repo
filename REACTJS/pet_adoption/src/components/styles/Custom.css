@@ -1,0 +1,229 @@
+/* Custom styles for Pet Adoption Platform */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Base typography */
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  color: #4a5568;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #2d3748;
+}
+
+/* Color system */
+:root {
+  --primary: #4A89DC;
+  --primary-light: #5D9CEC;
+  --primary-dark: #3B6EB5;
+  
+  --secondary: #37BC9B;
+  --secondary-light: #48CFAD;
+  --secondary-dark: #2E9B80;
+  
+  --accent: #F6BB42;
+  --accent-light: #FFCE54;
+  --accent-dark: #E9A329;
+  
+  --success: #8CC152;
+  --success-light: #A0D468;
+  --success-dark: #73A839;
+  
+  --warning: #F6BB42;
+  --warning-light: #FFCE54;
+  --warning-dark: #E9A329;
+  
+  --danger: #DA4453;
+  --danger-light: #ED5565;
+  --danger-dark: #C03544;
+  
+  --light: #F9FAFC;
+  --dark: #434A54;
+  --gray-100: #F1F3F9;
+  --gray-200: #E2E7F0;
+  --gray-300: #CBD5E0;
+  --gray-400: #A0AEC0;
+  --gray-500: #718096;
+  --gray-600: #4A5568;
+  --gray-700: #2D3748;
+  --gray-800: #1A202C;
+  --gray-900: #171923;
+}
+
+/* Custom button styles */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--secondary-light);
+  border-color: var(--secondary-light);
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--gray-800);
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: var(--accent-light);
+  border-color: var(--accent-light);
+  color: var(--gray-800);
+}
+
+/* Pet card styles */
+.pet-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pet-card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Hero section */
+.hero-section {
+  background: linear-gradient(rgba(74, 137, 220, 0.8), rgba(74, 137, 220, 0.6)), url('https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 8rem 0;
+  position: relative;
+}
+
+/* Footer styles */
+.footer {
+  background-color: var(--gray-800);
+  color: var(--gray-300);
+  padding: 4rem 0 2rem;
+}
+
+.footer h5 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.footer a {
+  color: var(--gray-400);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: var(--gray-400);
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+/* Quiz form styles */
+.quiz-card {
+  border-radius: 12px;
+  border: none;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-progress {
+  height: 8px;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Badge styles */
+.badge-card {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.badge-card:hover {
+  transform: scale(1.05);
+}
+
+/* Meet & Greet calendar */
+.calendar-container .react-calendar {
+  width: 100%;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.calendar-container .react-calendar__tile--active {
+  background-color: var(--primary);
+}
+
+.calendar-container .react-calendar__tile--now {
+  background-color: var(--gray-200);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 5rem 0;
+  }
+  
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  .pet-card img {
+    height: 180px;
+  }
+}
